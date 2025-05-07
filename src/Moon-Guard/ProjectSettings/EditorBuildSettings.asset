@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Boot.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game.unity
     guid: ed01f2b933693d8458b38c4bc0c68dae
+  - enabled: 1
+    path: Assets/Scenes/Meadow.unity
+    guid: b266a9cdce981f34d92c366dc72cc7df
   m_configObjects: {}

@@ -5,6 +5,10 @@ namespace Code.Gameplay.Features.Movement
 {
   [Game] public class Speed : IComponent { public float Value; }
   [Game] public class Direction : IComponent { public Vector2 Value; }
+  [Game] public class MoveTargetComponent : IComponent { public Vector2 Value; }
   [Game] public class Moving : IComponent { }
+  [Game] public class MovementAvailable : IComponent { }
+  [Game] public class MovingToTarget : IComponent { }
+  [Game] public class MovingToHero : IComponent { }
   [Game] public class TurnedAlongDirection : IComponent { }
 }
