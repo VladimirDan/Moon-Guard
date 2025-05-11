@@ -11,45 +11,50 @@ public static class GameComponentsLookup {
     public const int Destructed = 0;
     public const int SelfDestructTimer = 1;
     public const int View = 2;
-    public const int Damage = 3;
-    public const int Id = 4;
-    public const int SpriteRenderer = 5;
-    public const int Transform = 6;
-    public const int WorldPosition = 7;
-    public const int Enemy = 8;
-    public const int EnemyAnimator = 9;
-    public const int EnemyMoveTarget = 10;
-    public const int EnemyTypeId = 11;
-    public const int Hero = 12;
-    public const int HeroAnimator = 13;
-    public const int CurrentHP = 14;
-    public const int Dead = 15;
-    public const int FullHP = 16;
-    public const int ProcessingDeath = 17;
-    public const int Direction = 18;
-    public const int MovementAvailable = 19;
-    public const int MoveTarget = 20;
-    public const int Moving = 21;
-    public const int MovingToHero = 22;
-    public const int MovingToTarget = 23;
-    public const int Speed = 24;
-    public const int TurnedAlongDirection = 25;
-    public const int AxisInput = 26;
-    public const int CursorPositionInput = 27;
-    public const int Input = 28;
-    public const int CollectTargetsInterval = 29;
-    public const int CollectTargetsTimer = 30;
-    public const int LayerMask = 31;
-    public const int ReadyToCollectTargets = 32;
-    public const int TargetsBuffer = 33;
-    public const int TargetsSelectionRadius = 34;
+    public const int ViewPath = 3;
+    public const int ViewPrefab = 4;
+    public const int Damage = 5;
+    public const int Id = 6;
+    public const int SpriteRenderer = 7;
+    public const int Transform = 8;
+    public const int WorldPosition = 9;
+    public const int Enemy = 10;
+    public const int EnemyAnimator = 11;
+    public const int EnemyMoveTarget = 12;
+    public const int EnemyTypeId = 13;
+    public const int SpawnTimer = 14;
+    public const int Hero = 15;
+    public const int HeroAnimator = 16;
+    public const int CurrentHP = 17;
+    public const int Dead = 18;
+    public const int FullHP = 19;
+    public const int ProcessingDeath = 20;
+    public const int Direction = 21;
+    public const int MovementAvailable = 22;
+    public const int MoveTarget = 23;
+    public const int Moving = 24;
+    public const int MovingToHero = 25;
+    public const int MovingToTarget = 26;
+    public const int Speed = 27;
+    public const int TurnedAlongDirection = 28;
+    public const int AxisInput = 29;
+    public const int CursorPositionInput = 30;
+    public const int Input = 31;
+    public const int CollectTargetsInterval = 32;
+    public const int CollectTargetsTimer = 33;
+    public const int LayerMask = 34;
+    public const int ReadyToCollectTargets = 35;
+    public const int TargetsBuffer = 36;
+    public const int TargetsSelectionRadius = 37;
 
-    public const int TotalComponents = 35;
+    public const int TotalComponents = 38;
 
     public static readonly string[] componentNames = {
         "Destructed",
         "SelfDestructTimer",
         "View",
+        "ViewPath",
+        "ViewPrefab",
         "Damage",
         "Id",
         "SpriteRenderer",
@@ -59,6 +64,7 @@ public static class GameComponentsLookup {
         "EnemyAnimator",
         "EnemyMoveTarget",
         "EnemyTypeId",
+        "SpawnTimer",
         "Hero",
         "HeroAnimator",
         "CurrentHP",
@@ -88,6 +94,8 @@ public static class GameComponentsLookup {
         typeof(Code.Common.Destructed),
         typeof(Code.Common.SelfDestructTimer),
         typeof(Code.Common.View),
+        typeof(Code.Common.ViewPath),
+        typeof(Code.Common.ViewPrefab),
         typeof(Code.Gameplay.Common.Damage),
         typeof(Code.Gameplay.Common.Id),
         typeof(Code.Gameplay.Common.SpriteRendererComponent),
@@ -97,6 +105,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Enemies.EnemyAnimatorComponent),
         typeof(Code.Gameplay.Features.Enemies.EnemyMoveTargetComponent),
         typeof(Code.Gameplay.Features.Enemies.EnemyTypeIdComponent),
+        typeof(Code.Gameplay.Features.Enemies.SpawnTimer),
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
         typeof(Code.Gameplay.Features.LifeTime.CurrentHP),

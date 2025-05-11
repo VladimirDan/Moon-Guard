@@ -8,6 +8,7 @@ using Code.Gameplay.Features.TargetCollection;
 using Code.Gameplay.Input;
 using Code.Gameplay.TargetCollection;
 using Code.Infrastructure.Systems;
+using Code.Infrastructure.View;
 
 namespace Code.Gameplay
 {
@@ -18,7 +19,9 @@ namespace Code.Gameplay
     public BattleFeature(ISystemFactory systemFactory)
     {
       _systemFactory = systemFactory;
+      
       Add(_systemFactory.Create<InputFeature>());
+      Add(_systemFactory.Create<BindViewFeature>());
       
       Add(_systemFactory.Create<HeroFeature>());
 
