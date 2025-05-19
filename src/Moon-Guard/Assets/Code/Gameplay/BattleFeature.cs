@@ -1,4 +1,6 @@
 ﻿using Code.Common.Destruct;
+using Code.Gameplay.Features.Abilities;
+using Code.Gameplay.Features.Armaments;
 using Code.Gameplay.Features.Damage;
 using Code.Gameplay.Features.Enemies;
 using Code.Gameplay.Features.Hero;
@@ -30,6 +32,8 @@ namespace Code.Gameplay
       Add(_systemFactory.Create<DeathFeature>());
       
       Add(_systemFactory.Create<MovementFeature>());
+      Add(_systemFactory.Create<AbilityFeature>());
+      Add(_systemFactory.Create<ArmamentFeature>());
       
       Add(_systemFactory.Create<CollectTargetsFeature>());
       

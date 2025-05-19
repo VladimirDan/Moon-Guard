@@ -1,4 +1,4 @@
-﻿using Code.Gameplay.TargetCollection.Systems;
+﻿using Code.Gameplay.Features.TargetCollection.Systems;
 using Code.Infrastructure.Systems;
 
 namespace Code.Gameplay.Features.TargetCollection
@@ -7,7 +7,8 @@ namespace Code.Gameplay.Features.TargetCollection
     {
         public CollectTargetsFeature(ISystemFactory systemFactory)
         {
-            Add(systemFactory.Create<CastForTargetsSystem>());
+            Add(systemFactory.Create<CastForTargetsNoLimitSystem>());
+            Add(systemFactory.Create<CastForTargetsWithLimitSystem>());
             Add(systemFactory.Create<CollectTargetsIntervalSystem>());
             
             Add(systemFactory.Create<CleanupTargetBufferSystem>());

@@ -18,36 +18,49 @@ public static class GameComponentsLookup {
     public const int SpriteRenderer = 7;
     public const int Transform = 8;
     public const int WorldPosition = 9;
-    public const int Enemy = 10;
-    public const int EnemyAnimator = 11;
-    public const int EnemyMoveTarget = 12;
-    public const int EnemyTypeId = 13;
-    public const int SpawnTimer = 14;
-    public const int Hero = 15;
-    public const int HeroAnimator = 16;
-    public const int CurrentHP = 17;
-    public const int Dead = 18;
-    public const int FullHP = 19;
-    public const int ProcessingDeath = 20;
-    public const int Direction = 21;
-    public const int MovementAvailable = 22;
-    public const int MoveTarget = 23;
-    public const int Moving = 24;
-    public const int MovingToHero = 25;
-    public const int MovingToTarget = 26;
-    public const int Speed = 27;
-    public const int TurnedAlongDirection = 28;
-    public const int AxisInput = 29;
-    public const int CursorPositionInput = 30;
-    public const int Input = 31;
-    public const int CollectTargetsInterval = 32;
-    public const int CollectTargetsTimer = 33;
-    public const int LayerMask = 34;
-    public const int ReadyToCollectTargets = 35;
-    public const int TargetsBuffer = 36;
-    public const int TargetsSelectionRadius = 37;
+    public const int AbilityId = 10;
+    public const int LaserShooter = 11;
+    public const int LaserShotAbility = 12;
+    public const int LaserShotTarget = 13;
+    public const int Armament = 14;
+    public const int Processed = 15;
+    public const int TargetLimit = 16;
+    public const int Cooldown = 17;
+    public const int CooldownLeft = 18;
+    public const int CooldownUp = 19;
+    public const int Enemy = 20;
+    public const int EnemyAnimator = 21;
+    public const int EnemyMoveTarget = 22;
+    public const int EnemyTypeId = 23;
+    public const int SpawnTimer = 24;
+    public const int Hero = 25;
+    public const int HeroAnimator = 26;
+    public const int CurrentHP = 27;
+    public const int Dead = 28;
+    public const int FullHP = 29;
+    public const int ProcessingDeath = 30;
+    public const int Direction = 31;
+    public const int MovementAvailable = 32;
+    public const int MoveTarget = 33;
+    public const int Moving = 34;
+    public const int MovingToHero = 35;
+    public const int MovingToTarget = 36;
+    public const int Speed = 37;
+    public const int TurnedAlongDirection = 38;
+    public const int AxisInput = 39;
+    public const int CursorPositionInput = 40;
+    public const int Input = 41;
+    public const int CollectingTargetsContinuously = 42;
+    public const int CollectTargetsInterval = 43;
+    public const int CollectTargetsTimer = 44;
+    public const int EnemyLayerMask = 45;
+    public const int LayerMask = 46;
+    public const int ProcessedTargetsBuffer = 47;
+    public const int ReadyToCollectTargets = 48;
+    public const int TargetsBuffer = 49;
+    public const int TargetsSelectionRadius = 50;
 
-    public const int TotalComponents = 38;
+    public const int TotalComponents = 51;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -60,6 +73,16 @@ public static class GameComponentsLookup {
         "SpriteRenderer",
         "Transform",
         "WorldPosition",
+        "AbilityId",
+        "LaserShooter",
+        "LaserShotAbility",
+        "LaserShotTarget",
+        "Armament",
+        "Processed",
+        "TargetLimit",
+        "Cooldown",
+        "CooldownLeft",
+        "CooldownUp",
         "Enemy",
         "EnemyAnimator",
         "EnemyMoveTarget",
@@ -82,9 +105,12 @@ public static class GameComponentsLookup {
         "AxisInput",
         "CursorPositionInput",
         "Input",
+        "CollectingTargetsContinuously",
         "CollectTargetsInterval",
         "CollectTargetsTimer",
+        "EnemyLayerMask",
         "LayerMask",
+        "ProcessedTargetsBuffer",
         "ReadyToCollectTargets",
         "TargetsBuffer",
         "TargetsSelectionRadius"
@@ -101,6 +127,16 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.SpriteRendererComponent),
         typeof(Code.Gameplay.Common.TransformComponent),
         typeof(Code.Gameplay.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Abilities.AbilityIdComponent),
+        typeof(Code.Gameplay.Features.Abilities.LaserShooter),
+        typeof(Code.Gameplay.Features.Abilities.LaserShotAbility),
+        typeof(Code.Gameplay.Features.Abilities.LaserShotTarget),
+        typeof(Code.Gameplay.Features.Armaments.Armament),
+        typeof(Code.Gameplay.Features.Armaments.Processed),
+        typeof(Code.Gameplay.Features.Armaments.TargetLimit),
+        typeof(Code.Gameplay.Features.Cooldowns.Cooldown),
+        typeof(Code.Gameplay.Features.Cooldowns.CooldownLeft),
+        typeof(Code.Gameplay.Features.Cooldowns.CooldownUp),
         typeof(Code.Gameplay.Features.Enemies.Enemy),
         typeof(Code.Gameplay.Features.Enemies.EnemyAnimatorComponent),
         typeof(Code.Gameplay.Features.Enemies.EnemyMoveTargetComponent),
@@ -123,9 +159,12 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Input.AxisInput),
         typeof(Code.Gameplay.Input.CursorPositionInput),
         typeof(Code.Gameplay.Input.Input),
+        typeof(Code.Gameplay.TargetCollection.CollectingTargetsContinuously),
         typeof(Code.Gameplay.TargetCollection.CollectTargetsInterval),
         typeof(Code.Gameplay.TargetCollection.CollectTargetsTimer),
+        typeof(Code.Gameplay.TargetCollection.EnemyLayerMask),
         typeof(Code.Gameplay.TargetCollection.LayerMask),
+        typeof(Code.Gameplay.TargetCollection.ProcessedTargetsBuffer),
         typeof(Code.Gameplay.TargetCollection.ReadyToCollectTargets),
         typeof(Code.Gameplay.TargetCollection.TargetsBuffer),
         typeof(Code.Gameplay.TargetCollection.TargetsSelectionRadius)

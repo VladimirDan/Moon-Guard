@@ -77,7 +77,7 @@ Material:
     - _OutlineSize: 0
     - _OutlineSmootheness: 1.22
     - _OutlineSmoothness: 4.58
-    - _OverlayIntensity: 0
+    - _OverlayIntensity: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

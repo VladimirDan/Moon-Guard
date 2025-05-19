@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-namespace Code.Gameplay.TargetCollection.Systems
+namespace Code.Gameplay.Features.TargetCollection.Systems
 {
     public class CleanupTargetBufferSystem : ICleanupSystem
     {

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1847d52062ee46baa243abe867153e96, type: 3}
+  m_Name: LaserShotConfig
+  m_EditorClassIdentifier: 
+  abilityId: 1
+  levels:
+  - cooldown: 1
+    viewPrefab: {fileID: 5371811029233778659, guid: 29ae07a7e2eeb194b9a2258f89741842, type: 3}
+    projectileSetup:
+      speed: 5
+      pierce: 1
+      contactRadius: 0.1
+      lifeTime: 3
