@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.TargetCollection.TargetsBuffer targetsBuffer { get { return (Code.Gameplay.TargetCollection.TargetsBuffer)GetComponent(GameComponentsLookup.TargetsBuffer); } }
+    public Code.Gameplay.Features.TargetCollection.TargetsBuffer targetsBuffer { get { return (Code.Gameplay.Features.TargetCollection.TargetsBuffer)GetComponent(GameComponentsLookup.TargetsBuffer); } }
     public System.Collections.Generic.List<int> TargetsBuffer { get { return targetsBuffer.Value; } }
     public bool hasTargetsBuffer { get { return HasComponent(GameComponentsLookup.TargetsBuffer); } }
 
     public GameEntity AddTargetsBuffer(System.Collections.Generic.List<int> newValue) {
         var index = GameComponentsLookup.TargetsBuffer;
-        var component = (Code.Gameplay.TargetCollection.TargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.TargetCollection.TargetsBuffer));
+        var component = (Code.Gameplay.Features.TargetCollection.TargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.Features.TargetCollection.TargetsBuffer));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceTargetsBuffer(System.Collections.Generic.List<int> newValue) {
         var index = GameComponentsLookup.TargetsBuffer;
-        var component = (Code.Gameplay.TargetCollection.TargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.TargetCollection.TargetsBuffer));
+        var component = (Code.Gameplay.Features.TargetCollection.TargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.Features.TargetCollection.TargetsBuffer));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

@@ -32,7 +32,5 @@ namespace Code.Gameplay.Features.Cooldowns.Systems
                 }
             }
         }
-
-        
     }
 }

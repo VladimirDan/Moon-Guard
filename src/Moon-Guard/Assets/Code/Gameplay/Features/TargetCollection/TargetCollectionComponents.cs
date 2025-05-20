@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Entitas;
 
-namespace Code.Gameplay.TargetCollection
+namespace Code.Gameplay.Features.TargetCollection
 {
     [Game] public class TargetsBuffer : IComponent { public List<int> Value; }
     [Game] public class ProcessedTargetsBuffer : IComponent { public List<int> Value; }

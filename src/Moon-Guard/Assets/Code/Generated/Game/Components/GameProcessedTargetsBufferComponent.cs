@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.TargetCollection.ProcessedTargetsBuffer processedTargetsBuffer { get { return (Code.Gameplay.TargetCollection.ProcessedTargetsBuffer)GetComponent(GameComponentsLookup.ProcessedTargetsBuffer); } }
+    public Code.Gameplay.Features.TargetCollection.ProcessedTargetsBuffer processedTargetsBuffer { get { return (Code.Gameplay.Features.TargetCollection.ProcessedTargetsBuffer)GetComponent(GameComponentsLookup.ProcessedTargetsBuffer); } }
     public System.Collections.Generic.List<int> ProcessedTargetsBuffer { get { return processedTargetsBuffer.Value; } }
     public bool hasProcessedTargetsBuffer { get { return HasComponent(GameComponentsLookup.ProcessedTargetsBuffer); } }
 
     public GameEntity AddProcessedTargetsBuffer(System.Collections.Generic.List<int> newValue) {
         var index = GameComponentsLookup.ProcessedTargetsBuffer;
-        var component = (Code.Gameplay.TargetCollection.ProcessedTargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.TargetCollection.ProcessedTargetsBuffer));
+        var component = (Code.Gameplay.Features.TargetCollection.ProcessedTargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.Features.TargetCollection.ProcessedTargetsBuffer));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceProcessedTargetsBuffer(System.Collections.Generic.List<int> newValue) {
         var index = GameComponentsLookup.ProcessedTargetsBuffer;
-        var component = (Code.Gameplay.TargetCollection.ProcessedTargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.TargetCollection.ProcessedTargetsBuffer));
+        var component = (Code.Gameplay.Features.TargetCollection.ProcessedTargetsBuffer)CreateComponent(index, typeof(Code.Gameplay.Features.TargetCollection.ProcessedTargetsBuffer));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

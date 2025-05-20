@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.TargetCollection.TargetsSelectionRadius targetsSelectionRadius { get { return (Code.Gameplay.TargetCollection.TargetsSelectionRadius)GetComponent(GameComponentsLookup.TargetsSelectionRadius); } }
+    public Code.Gameplay.Features.TargetCollection.TargetsSelectionRadius targetsSelectionRadius { get { return (Code.Gameplay.Features.TargetCollection.TargetsSelectionRadius)GetComponent(GameComponentsLookup.TargetsSelectionRadius); } }
     public float TargetsSelectionRadius { get { return targetsSelectionRadius.Value; } }
     public bool hasTargetsSelectionRadius { get { return HasComponent(GameComponentsLookup.TargetsSelectionRadius); } }
 
     public GameEntity AddTargetsSelectionRadius(float newValue) {
         var index = GameComponentsLookup.TargetsSelectionRadius;
-        var component = (Code.Gameplay.TargetCollection.TargetsSelectionRadius)CreateComponent(index, typeof(Code.Gameplay.TargetCollection.TargetsSelectionRadius));
+        var component = (Code.Gameplay.Features.TargetCollection.TargetsSelectionRadius)CreateComponent(index, typeof(Code.Gameplay.Features.TargetCollection.TargetsSelectionRadius));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceTargetsSelectionRadius(float newValue) {
         var index = GameComponentsLookup.TargetsSelectionRadius;
-        var component = (Code.Gameplay.TargetCollection.TargetsSelectionRadius)CreateComponent(index, typeof(Code.Gameplay.TargetCollection.TargetsSelectionRadius));
+        var component = (Code.Gameplay.Features.TargetCollection.TargetsSelectionRadius)CreateComponent(index, typeof(Code.Gameplay.Features.TargetCollection.TargetsSelectionRadius));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

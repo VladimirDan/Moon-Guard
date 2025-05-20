@@ -15,8 +15,8 @@ namespace Code.Gameplay.Features.Abilities.Systems
 
         private readonly IGroup<GameEntity> _abilities;
         private readonly IGroup<GameEntity> _laserShooters;
-        private readonly IGroup<GameEntity> _laserShotTarget;
         private readonly IGroup<GameEntity> _enemies;
+        
         private List<GameEntity> _buffer = new(32);
 
         public LaserShotAbilitySystem(GameContext gameContext, IStaticDataService staticDataService,
@@ -33,12 +33,6 @@ namespace Code.Gameplay.Features.Abilities.Systems
                 GameMatcher.WorldPosition
                 ));
             
-            _laserShotTarget = gameContext.GetGroup(GameMatcher.AllOf(
-                GameMatcher.LaserShooter,
-                GameMatcher.LaserShotTarget,
-                GameMatcher.EnemyLayerMask
-            ));
-            
             _enemies  = gameContext.GetGroup(GameMatcher.AllOf(
                 GameMatcher.Enemy,
                 GameMatcher.WorldPosition
@@ -53,6 +47,7 @@ namespace Code.Gameplay.Features.Abilities.Systems
             {
                 _armamentFactory
                     .CreateLaserShot(1, laserShooter.WorldPosition, laserShooter.EnemyLayerMask)
+                    .AddProducerId(laserShooter.Id)
                     .ReplaceDirection((FirstAvailableTarget().WorldPosition - laserShooter.WorldPosition).normalized)
                     .With(x => x.isMoving = true);
                 

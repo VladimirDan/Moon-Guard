@@ -1,14 +1,17 @@
 ﻿using Code.Common.Destruct;
 using Code.Gameplay.Features.Abilities;
 using Code.Gameplay.Features.Armaments;
-using Code.Gameplay.Features.Damage;
+using Code.Gameplay.Features.EffectApplication;
+using Code.Gameplay.Features.Effects;
 using Code.Gameplay.Features.Enemies;
 using Code.Gameplay.Features.Hero;
 using Code.Gameplay.Features.LifeTime;
 using Code.Gameplay.Features.Movement;
+using Code.Gameplay.Features.Statuses;
+using Code.Gameplay.Features.Statuses.Factory;
+using Code.Gameplay.Features.Statuses.Systems;
 using Code.Gameplay.Features.TargetCollection;
 using Code.Gameplay.Input;
-using Code.Gameplay.TargetCollection;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View;
 
@@ -36,8 +39,10 @@ namespace Code.Gameplay
       Add(_systemFactory.Create<ArmamentFeature>());
       
       Add(_systemFactory.Create<CollectTargetsFeature>());
+      Add(_systemFactory.Create<EffectApllicationFeature>());
       
-      Add(_systemFactory.Create<DamageFeature>());
+      Add(_systemFactory.Create<EffectFeature>());
+      Add(_systemFactory.Create<StatusFeature>());
       
       Add(_systemFactory.Create<ProcessDestructedFeature>());
     }
