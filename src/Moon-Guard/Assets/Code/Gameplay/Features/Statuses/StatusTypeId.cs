@@ -4,5 +4,6 @@
     {
         Unknown = 0,
         Poisoned = 1,
+        Freeze = 2,
     }
 }

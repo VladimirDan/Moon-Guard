@@ -1,5 +1,7 @@
-﻿using Code.Common.Entity;
+﻿using System.Collections.Generic;
+using Code.Common.Entity;
 using Code.Common.Extensions;
+using Code.Gameplay.Features.CharacterStats;
 using Code.Infrastructure.Identifiers;
 using UnityEngine;
 
@@ -16,14 +18,20 @@ namespace Code.Gameplay.Features.Hero.Factory
 
         public GameEntity CreateHero(Vector3 pos)
         {
+            Dictionary<Stats, float> baseStats = InitStats.EmptyStatDictionary()
+                .With(x => x[Stats.Speed] = 2)
+                .With(x => x[Stats.MaxHp] = 100);
+            
             return CreateEntity.Empty()
                 .AddId(_identifierService.Next())
                 .AddViewPath("Gameplay/Hero/Hero")
                 .AddWorldPosition(pos)
+                .AddBaseStats(baseStats)
+                .AddStatModifiers(InitStats.EmptyStatDictionary())
                 .AddDirection(Vector2.zero)
-                .AddSpeed(2)
-                .AddCurrentHP(100)
-                .AddFullHP(100)
+                .AddSpeed(baseStats[Stats.Speed])
+                .AddCurrentHP(baseStats[Stats.MaxHp])
+                .AddFullHP(baseStats[Stats.MaxHp])
                 .AddEnemyLayerMask(CollisionLayer.Enemy.AsMask())
                 .With(x => x.isLaserShooter = true)
                 .With(x => x.isHero = true)

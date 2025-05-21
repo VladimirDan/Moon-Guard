@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Code.Infrastructure.Identifiers;
 using Code.Common.Entity;
 using Code.Common.Extensions;
+using Code.Gameplay.Features.CharacterStats;
 using Code.Gameplay.Features.Effects;
 using UnityEngine;
 
@@ -30,15 +31,22 @@ namespace Code.Gameplay.Features.Enemies.Factory
 
         private GameEntity CreatePredator(Vector2 pos)
         {
+            Dictionary<Stats, float> baseStats = InitStats.EmptyStatDictionary()
+                .With(x => x[Stats.Speed] = 1)
+                .With(x => x[Stats.MaxHp] = 5)
+                .With(x => x[Stats.Damage] = 1);
+            
             return CreateEntity.Empty()
                 .AddId(_identifierService.Next())
                 .AddViewPath("Gameplay/Enemies/Predators/Predator/Predator")
                 .AddEnemyTypeId(EnemyTypeId.Predator)
                 .AddWorldPosition(pos)
-                .AddSpeed(1)
-                .AddCurrentHP(5)
-                .AddFullHP(5)
-                .AddEffectSetups(new List<EffectSetup>(){new(){effectTypeId = EffectTypeId.Damage, value = 1}})
+                .AddBaseStats(baseStats)
+                .AddStatModifiers(InitStats.EmptyStatDictionary())
+                .AddSpeed(baseStats[Stats.Speed])
+                .AddCurrentHP(baseStats[Stats.MaxHp])
+                .AddFullHP(baseStats[Stats.MaxHp])
+                .AddEffectSetups(new List<EffectSetup>(){new(){effectTypeId = EffectTypeId.Damage, value = baseStats[Stats.Damage]}})
                 .AddTargetsBuffer(new List<int>(1))
                 .AddTargetsSelectionRadius(0.3f)
                 .AddCollectTargetsInterval(0.5f)

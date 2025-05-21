@@ -1,6 +1,7 @@
 ﻿using Code.Common.Destruct;
 using Code.Gameplay.Features.Abilities;
 using Code.Gameplay.Features.Armaments;
+using Code.Gameplay.Features.CharacterStats;
 using Code.Gameplay.Features.EffectApplication;
 using Code.Gameplay.Features.Effects;
 using Code.Gameplay.Features.Enemies;
@@ -43,6 +44,7 @@ namespace Code.Gameplay
       
       Add(_systemFactory.Create<EffectFeature>());
       Add(_systemFactory.Create<StatusFeature>());
+      Add(_systemFactory.Create<StatsFeature>());
       
       Add(_systemFactory.Create<ProcessDestructedFeature>());
     }

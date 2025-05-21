@@ -29,56 +29,63 @@ public static class GameComponentsLookup {
     public const int Processed = 18;
     public const int StatusSetups = 19;
     public const int TargetLimit = 20;
-    public const int Cooldown = 21;
-    public const int CooldownLeft = 22;
-    public const int CooldownUp = 23;
-    public const int DamageEffect = 24;
-    public const int Effect = 25;
-    public const int EffectValue = 26;
-    public const int ProducerId = 27;
-    public const int TargetId = 28;
-    public const int Enemy = 29;
-    public const int EnemyAnimator = 30;
-    public const int EnemyMoveTarget = 31;
-    public const int EnemyTypeId = 32;
-    public const int SpawnTimer = 33;
-    public const int Hero = 34;
-    public const int HeroAnimator = 35;
-    public const int CurrentHP = 36;
-    public const int Dead = 37;
-    public const int FullHP = 38;
-    public const int ProcessingDeath = 39;
-    public const int Direction = 40;
-    public const int MovementAvailable = 41;
-    public const int MoveTarget = 42;
-    public const int Moving = 43;
-    public const int MovingToHero = 44;
-    public const int MovingToTarget = 45;
-    public const int Speed = 46;
-    public const int TurnedAlongDirection = 47;
-    public const int Applied = 48;
-    public const int Duration = 49;
-    public const int Period = 50;
-    public const int Poison = 51;
-    public const int Status = 52;
-    public const int StatusTypeId = 53;
-    public const int TimeLeft = 54;
-    public const int TimeSinceLastTick = 55;
-    public const int Unapplied = 56;
-    public const int CollectingTargetsContinuously = 57;
-    public const int CollectTargetsInterval = 58;
-    public const int CollectTargetsTimer = 59;
-    public const int EnemyLayerMask = 60;
-    public const int LayerMask = 61;
-    public const int ProcessedTargetsBuffer = 62;
-    public const int ReadyToCollectTargets = 63;
-    public const int TargetsBuffer = 64;
-    public const int TargetsSelectionRadius = 65;
-    public const int AxisInput = 66;
-    public const int CursorPositionInput = 67;
-    public const int Input = 68;
+    public const int BaseStats = 21;
+    public const int StatChange = 22;
+    public const int StatModifiers = 23;
+    public const int Cooldown = 24;
+    public const int CooldownLeft = 25;
+    public const int CooldownUp = 26;
+    public const int DamageEffect = 27;
+    public const int Effect = 28;
+    public const int EffectValue = 29;
+    public const int HealEffect = 30;
+    public const int ProducerId = 31;
+    public const int TargetId = 32;
+    public const int Enemy = 33;
+    public const int EnemyAnimator = 34;
+    public const int EnemyMoveTarget = 35;
+    public const int EnemyTypeId = 36;
+    public const int SpawnTimer = 37;
+    public const int Hero = 38;
+    public const int HeroAnimator = 39;
+    public const int CurrentHP = 40;
+    public const int Dead = 41;
+    public const int FullHP = 42;
+    public const int ProcessingDeath = 43;
+    public const int Direction = 44;
+    public const int MovementAvailable = 45;
+    public const int MoveTarget = 46;
+    public const int Moving = 47;
+    public const int MovingToHero = 48;
+    public const int MovingToTarget = 49;
+    public const int Speed = 50;
+    public const int TurnedAlongDirection = 51;
+    public const int Affected = 52;
+    public const int Applied = 53;
+    public const int ApplierStatusLink = 54;
+    public const int Duration = 55;
+    public const int Freeze = 56;
+    public const int Period = 57;
+    public const int Poison = 58;
+    public const int Status = 59;
+    public const int StatusTypeId = 60;
+    public const int TimeLeft = 61;
+    public const int TimeSinceLastTick = 62;
+    public const int Unapplied = 63;
+    public const int CollectingTargetsContinuously = 64;
+    public const int CollectTargetsInterval = 65;
+    public const int CollectTargetsTimer = 66;
+    public const int EnemyLayerMask = 67;
+    public const int LayerMask = 68;
+    public const int ProcessedTargetsBuffer = 69;
+    public const int ReadyToCollectTargets = 70;
+    public const int TargetsBuffer = 71;
+    public const int TargetsSelectionRadius = 72;
+    public const int AxisInput = 73;
+    public const int CursorPositionInput = 74;
+    public const int Input = 75;
 
-    public const int TotalComponents = 69;
+    public const int TotalComponents = 76;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -102,12 +109,16 @@ public static class GameComponentsLookup {
         "Processed",
         "StatusSetups",
         "TargetLimit",
+        "BaseStats",
+        "StatChange",
+        "StatModifiers",
         "Cooldown",
         "CooldownLeft",
         "CooldownUp",
         "DamageEffect",
         "Effect",
         "EffectValue",
+        "HealEffect",
         "ProducerId",
         "TargetId",
         "Enemy",
@@ -129,8 +140,11 @@ public static class GameComponentsLookup {
         "MovingToTarget",
         "Speed",
         "TurnedAlongDirection",
+        "Affected",
         "Applied",
+        "ApplierStatusLink",
         "Duration",
+        "Freeze",
         "Period",
         "Poison",
         "Status",
@@ -174,12 +188,16 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Armaments.Processed),
         typeof(Code.Gameplay.Features.Armaments.StatusSetups),
         typeof(Code.Gameplay.Features.Armaments.TargetLimit),
+        typeof(Code.Gameplay.Features.CharacterStats.BaseStats),
+        typeof(Code.Gameplay.Features.CharacterStats.StatChange),
+        typeof(Code.Gameplay.Features.CharacterStats.StatModifiers),
         typeof(Code.Gameplay.Features.Cooldowns.Cooldown),
         typeof(Code.Gameplay.Features.Cooldowns.CooldownLeft),
         typeof(Code.Gameplay.Features.Cooldowns.CooldownUp),
         typeof(Code.Gameplay.Features.Effects.DamageEffect),
         typeof(Code.Gameplay.Features.Effects.Effect),
         typeof(Code.Gameplay.Features.Effects.EffectValue),
+        typeof(Code.Gameplay.Features.Effects.HealEffect),
         typeof(Code.Gameplay.Features.Effects.ProducerId),
         typeof(Code.Gameplay.Features.Effects.TargetId),
         typeof(Code.Gameplay.Features.Enemies.Enemy),
@@ -201,8 +219,11 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Movement.MovingToTarget),
         typeof(Code.Gameplay.Features.Movement.Speed),
         typeof(Code.Gameplay.Features.Movement.TurnedAlongDirection),
+        typeof(Code.Gameplay.Features.Statuses.Affected),
         typeof(Code.Gameplay.Features.Statuses.Applied),
+        typeof(Code.Gameplay.Features.Statuses.ApplierStatusLink),
         typeof(Code.Gameplay.Features.Statuses.Duration),
+        typeof(Code.Gameplay.Features.Statuses.Freeze),
         typeof(Code.Gameplay.Features.Statuses.Period),
         typeof(Code.Gameplay.Features.Statuses.Poison),
         typeof(Code.Gameplay.Features.Statuses.Status),

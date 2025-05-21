@@ -22,9 +22,22 @@ namespace Code.Gameplay.Features.Effects.Factory
                     break;
                 case EffectTypeId.Damage:
                     return CreateDamageEffect(producerId, targetId, effectSetup.value);
+                case EffectTypeId.Heal:
+                    return CreateHealEffect(producerId, targetId, effectSetup.value);
             }
             
             throw new Exception($"Effect {effectSetup.effectTypeId} does not exist");
+        }
+
+        private GameEntity CreateHealEffect(int producerId, int targetId, float value)
+        {
+            return CreateEntity.Empty()
+                .AddId(_identifierService.Next())
+                .With(x => x.isEffect = true)
+                .With(x => x.isHealEffect = true)
+                .AddProducerId(producerId)
+                .AddTargetId(targetId)
+                .AddEffectValue(value);
         }
 
         private GameEntity CreateDamageEffect(int producerId, int targetId, float damage)
