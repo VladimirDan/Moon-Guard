@@ -18,12 +18,9 @@ namespace Code.Gameplay.Features.Statuses.Factory
 
         public GameEntity CreateStatus(StatusSetup statusSetup, int producerId, int targetID)
         {
-            GameEntity status = null;
+            GameEntity status;
             switch (statusSetup.statusTypeId)
             {
-                case StatusTypeId.Unknown:
-                    break;
-                
                 case StatusTypeId.Poisoned:
                     status = CreatePoisonStatus(statusSetup, producerId, targetID);
                     break;
@@ -45,7 +42,8 @@ namespace Code.Gameplay.Features.Statuses.Factory
             }
 
             status
-                .With(x => x.isStatus = true, when: statusSetup.duration > 0)
+                //.With(x => x.isStatus = true, when: statusSetup.duration > 0)
+                .With(x => x.AddDuration(statusSetup.duration), when: statusSetup.duration > 0)
                 .With(x => x.AddTimeLeft(statusSetup.duration), when: statusSetup.duration > 0)
                 .With(x => x.AddPeriod(statusSetup.period), when: statusSetup.period > 0)
                 .With(x => x.AddTimeSinceLastTick(0), when: statusSetup.period > 0);

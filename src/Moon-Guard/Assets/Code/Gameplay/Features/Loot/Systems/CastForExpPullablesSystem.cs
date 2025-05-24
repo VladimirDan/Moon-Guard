@@ -1,0 +1,54 @@
+﻿using Code.Common.Extensions;
+using Code.Gameplay.Common.Physics;
+using Entitas;
+
+namespace Code.Gameplay.Features.Loot.Systems
+{
+    public class CastForExpPullablesSystem : IExecuteSystem
+    {
+        private readonly IPhysicsService _physicsService;
+        private readonly IGroup<GameEntity> _looters;
+        private readonly int _layerMask = CollisionLayer.Collectable.AsMask();
+        private readonly GameEntity[] _hitBuffer = new GameEntity[128];
+
+        public CastForExpPullablesSystem(GameContext game, IPhysicsService physicsService)
+        {
+            _physicsService = physicsService;
+            _looters = game.GetGroup(GameMatcher
+                .AllOf(
+                    GameMatcher.WorldPosition,
+                    GameMatcher.ExpLootPoolingRadius
+                ));
+        }
+
+        public void Execute()
+        {
+            foreach (GameEntity looter in _looters)
+            {
+                for (int i = 0; i < LootInRadius(looter); i++)
+                {
+                    if (_hitBuffer[i].isPullable && _hitBuffer[i].isExpPullable)
+                    {
+                        _hitBuffer[i].isPullable = false;
+                        _hitBuffer[i].isPulling = true;
+                    }
+                }
+
+                ClearBugger();
+            }
+        }
+
+        private void ClearBugger()
+        {
+            for (int i = 0; i < _hitBuffer.Length; i++)
+            {
+                _hitBuffer[i] = null;
+            }
+        }
+
+        private int LootInRadius(GameEntity looter)
+        {
+            return _physicsService.CircleCastNonAlloc(looter.WorldPosition, looter.ExpLootPoolingRadius, _layerMask, _hitBuffer);
+        }
+    }
+}

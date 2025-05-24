@@ -4,6 +4,7 @@ using System.Linq;
 using Code.Gameplay.Features.Abilities;
 using Code.Gameplay.Features.Abilities.Configs;
 using Code.Gameplay.Features.Enchants;
+using Code.Gameplay.Features.Loot;
 using Code.Gameplay.Windows;
 using Code.Gameplay.Windows.Configs;
 using UnityEngine;
@@ -14,12 +15,14 @@ namespace Code.Gameplay.StaticData
   {
     private Dictionary<AbilityId, AbilityConfig> _abilityById;
     private Dictionary<EnchantTypeId, EnchantConfig> _enchantById;
+    private Dictionary<LootTypeId, LootConfig> _lootById;
     private Dictionary<WindowId, GameObject> _windowPrefabsById;
     
     public void LoadAll()
     {
       LoadAbilities();
       LoadEnchants();
+      LoadLoot();
       //LoadWindows();
     }
 
@@ -30,7 +33,7 @@ namespace Code.Gameplay.StaticData
 
       throw new Exception($"Ability config {abilityId} was not found");
     }
-    
+
     public GameObject GetWindowPrefab(WindowId id) =>
       _windowPrefabsById.TryGetValue(id, out GameObject prefab)
         ? prefab
@@ -44,6 +47,14 @@ namespace Code.Gameplay.StaticData
       throw new Exception($"Enchant config for {typeId} was not found");
     }
     
+    public LootConfig GetLootConfig(LootTypeId typeId)
+    {
+      if (_lootById.TryGetValue(typeId, out LootConfig config))
+        return config;
+
+      throw new Exception($"Loot config for {typeId} was not found");
+    }
+
     public AbilityLevel GetAbilityLevel(AbilityId abilityId, int level)
     {
       AbilityConfig config = GetAbilityConfig(abilityId);
@@ -53,20 +64,27 @@ namespace Code.Gameplay.StaticData
 
       return config.levels[level - 1];
     }
-    
+
     private void LoadAbilities()
     {
       _abilityById = Resources.LoadAll<AbilityConfig>("Configs/Abilities/LaserShotConfig")
         .ToDictionary(x => x.abilityId, x => x);
     }
-    
+
     private void LoadEnchants()
     {
       _enchantById = Resources
         .LoadAll<EnchantConfig>("Configs/Enchants")
         .ToDictionary(x => x.TypeId, x => x);
     }
-    
+
+    private void LoadLoot()
+    {
+      _lootById = Resources
+        .LoadAll<LootConfig>("Configs/Loot")
+        .ToDictionary(x => x.lootTypeId, x => x);
+    }
+
     private void LoadWindows()
     {
       _windowPrefabsById = Resources

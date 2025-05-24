@@ -15,6 +15,7 @@ namespace Code.Gameplay.Features.Enemies
             Add(_systemFactory.Create<InitializeSpawnTimerSystem>());
             Add(_systemFactory.Create<SetMoveTargetByHeroWorldPositionSystem>());
             Add(_systemFactory.Create<EnemyDeathSystem>());
+            Add(_systemFactory.Create<EnemyDropLootSystem>());
             Add(_systemFactory.Create<FinalizeEnemyDeathProcessingSystem>());
         }
     }

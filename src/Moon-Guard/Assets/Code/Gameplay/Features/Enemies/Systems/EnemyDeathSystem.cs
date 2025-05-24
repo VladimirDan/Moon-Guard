@@ -5,7 +5,7 @@ namespace Code.Gameplay.Features.Enemies.Systems
 {
     public class EnemyDeathSystem : IExecuteSystem
     {
-        private const float DeathTime = 2;
+        private const float DeathTime = 0;
         private readonly IGroup<GameEntity> _enemies;
 
         public EnemyDeathSystem(GameContext game)
