@@ -12,4 +12,5 @@ namespace Code.Gameplay.Features.TargetCollection
     [Game] public class EnemyLayerMask : IComponent { public int Value; }
     [Game] public class ReadyToCollectTargets : IComponent { }
     [Game] public class CollectingTargetsContinuously : IComponent { }
+    [Game] public class Reached : IComponent { }
 }

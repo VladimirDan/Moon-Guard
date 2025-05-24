@@ -41,51 +41,56 @@ public static class GameComponentsLookup {
     public const int HealEffect = 30;
     public const int ProducerId = 31;
     public const int TargetId = 32;
-    public const int Enemy = 33;
-    public const int EnemyAnimator = 34;
-    public const int EnemyMoveTarget = 35;
-    public const int EnemyTypeId = 36;
-    public const int SpawnTimer = 37;
-    public const int Hero = 38;
-    public const int HeroAnimator = 39;
-    public const int CurrentHP = 40;
-    public const int Dead = 41;
-    public const int FullHP = 42;
-    public const int ProcessingDeath = 43;
-    public const int Direction = 44;
-    public const int MovementAvailable = 45;
-    public const int MoveTarget = 46;
-    public const int Moving = 47;
-    public const int MovingToHero = 48;
-    public const int MovingToTarget = 49;
-    public const int Speed = 50;
-    public const int TurnedAlongDirection = 51;
-    public const int Affected = 52;
-    public const int Applied = 53;
-    public const int ApplierStatusLink = 54;
-    public const int Duration = 55;
-    public const int Freeze = 56;
-    public const int Period = 57;
-    public const int Poison = 58;
-    public const int Status = 59;
-    public const int StatusTypeId = 60;
-    public const int TimeLeft = 61;
-    public const int TimeSinceLastTick = 62;
-    public const int Unapplied = 63;
-    public const int CollectingTargetsContinuously = 64;
-    public const int CollectTargetsInterval = 65;
-    public const int CollectTargetsTimer = 66;
-    public const int EnemyLayerMask = 67;
-    public const int LayerMask = 68;
-    public const int ProcessedTargetsBuffer = 69;
-    public const int ReadyToCollectTargets = 70;
-    public const int TargetsBuffer = 71;
-    public const int TargetsSelectionRadius = 72;
-    public const int AxisInput = 73;
-    public const int CursorPositionInput = 74;
-    public const int Input = 75;
+    public const int EnchantTypeId = 33;
+    public const int EnchantVisuals = 34;
+    public const int ExplosiveEnchant = 35;
+    public const int PoisonEnchant = 36;
+    public const int Enemy = 37;
+    public const int EnemyAnimator = 38;
+    public const int EnemyMoveTarget = 39;
+    public const int EnemyTypeId = 40;
+    public const int SpawnTimer = 41;
+    public const int Hero = 42;
+    public const int HeroAnimator = 43;
+    public const int CurrentHP = 44;
+    public const int Dead = 45;
+    public const int FullHP = 46;
+    public const int ProcessingDeath = 47;
+    public const int Direction = 48;
+    public const int MovementAvailable = 49;
+    public const int MoveTarget = 50;
+    public const int Moving = 51;
+    public const int MovingToHero = 52;
+    public const int MovingToTarget = 53;
+    public const int Speed = 54;
+    public const int TurnedAlongDirection = 55;
+    public const int Affected = 56;
+    public const int Applied = 57;
+    public const int ApplierStatusLink = 58;
+    public const int Duration = 59;
+    public const int Freeze = 60;
+    public const int Period = 61;
+    public const int Poison = 62;
+    public const int Status = 63;
+    public const int StatusTypeId = 64;
+    public const int TimeLeft = 65;
+    public const int TimeSinceLastTick = 66;
+    public const int Unapplied = 67;
+    public const int CollectingTargetsContinuously = 68;
+    public const int CollectTargetsInterval = 69;
+    public const int CollectTargetsTimer = 70;
+    public const int EnemyLayerMask = 71;
+    public const int LayerMask = 72;
+    public const int ProcessedTargetsBuffer = 73;
+    public const int Reached = 74;
+    public const int ReadyToCollectTargets = 75;
+    public const int TargetsBuffer = 76;
+    public const int TargetsSelectionRadius = 77;
+    public const int AxisInput = 78;
+    public const int CursorPositionInput = 79;
+    public const int Input = 80;
 
-    public const int TotalComponents = 76;
+    public const int TotalComponents = 81;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -121,6 +126,10 @@ public static class GameComponentsLookup {
         "HealEffect",
         "ProducerId",
         "TargetId",
+        "EnchantTypeId",
+        "EnchantVisuals",
+        "ExplosiveEnchant",
+        "PoisonEnchant",
         "Enemy",
         "EnemyAnimator",
         "EnemyMoveTarget",
@@ -158,6 +167,7 @@ public static class GameComponentsLookup {
         "EnemyLayerMask",
         "LayerMask",
         "ProcessedTargetsBuffer",
+        "Reached",
         "ReadyToCollectTargets",
         "TargetsBuffer",
         "TargetsSelectionRadius",
@@ -200,6 +210,10 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Effects.HealEffect),
         typeof(Code.Gameplay.Features.Effects.ProducerId),
         typeof(Code.Gameplay.Features.Effects.TargetId),
+        typeof(Code.Gameplay.Features.Enchants.EnchantTypeIdComponent),
+        typeof(Code.Gameplay.Features.Enchants.EnchantVisualsComponent),
+        typeof(Code.Gameplay.Features.Enchants.ExplosiveEnchant),
+        typeof(Code.Gameplay.Features.Enchants.PoisonEnchant),
         typeof(Code.Gameplay.Features.Enemies.Enemy),
         typeof(Code.Gameplay.Features.Enemies.EnemyAnimatorComponent),
         typeof(Code.Gameplay.Features.Enemies.EnemyMoveTargetComponent),
@@ -237,6 +251,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.TargetCollection.EnemyLayerMask),
         typeof(Code.Gameplay.Features.TargetCollection.LayerMask),
         typeof(Code.Gameplay.Features.TargetCollection.ProcessedTargetsBuffer),
+        typeof(Code.Gameplay.Features.TargetCollection.Reached),
         typeof(Code.Gameplay.Features.TargetCollection.ReadyToCollectTargets),
         typeof(Code.Gameplay.Features.TargetCollection.TargetsBuffer),
         typeof(Code.Gameplay.Features.TargetCollection.TargetsSelectionRadius),

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.Gameplay.Features.Abilities.Configs
 {
-    [CreateAssetMenu(menuName = "Moon Guard", fileName = "abilitConfig")]
+    [CreateAssetMenu(menuName = "Moon Guard/abilityConfig", fileName = "abilityConfig")]
     public class AbilityConfig : ScriptableObject
     {
         public AbilityId abilityId;

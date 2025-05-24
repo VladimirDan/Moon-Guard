@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6848469130549857095}
   - component: {fileID: 1557407318731609291}
+  - component: {fileID: 7448829070594324501}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -84,6 +85,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7448829070594324501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792109486133688577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fea46d9a21f47a1a494e6ddce632159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Renderer: {fileID: 1557407318731609291}
+  FreezeColor: {r: 0.21960784, g: 0.6392157, b: 0.74509805, a: 1}
+  FreezeOutlineSize: 3
+  FreezeOutlineSmoothness: 8
+  PoisonColor: {r: 0.21960784, g: 0.6392157, b: 0.74509805, a: 1}
+  PoisonColorIntensity: 0.6
 --- !u!1 &3360128356117953061
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +114,7 @@ GameObject:
   - component: {fileID: 1045153556455938967}
   - component: {fileID: 5521012266931918902}
   - component: {fileID: 1761904412206960815}
+  - component: {fileID: -5958308422239703410}
   m_Layer: 0
   m_Name: projectileBase
   m_TagString: Untagged
@@ -143,6 +163,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 5521012266931918902}
+--- !u!114 &-5958308422239703410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3360128356117953061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a7e56f7fbe43c280989a269441265b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntityView: {fileID: 5521012266931918902}
+  EnchantVisuals: {fileID: 7448829070594324501}
 --- !u!1 &7376349850620682343
 GameObject:
   m_ObjectHideFlags: 0
