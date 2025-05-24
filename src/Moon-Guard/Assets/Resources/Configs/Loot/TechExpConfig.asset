@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TechExpConfig
   m_EditorClassIdentifier: 
   lootTypeId: 1
-  experience: 1
+  experience: 50
   pullSpeed: 10
   collectDistance: 0.4
   viewPrefab: {fileID: 2044352771007598767, guid: ed05576a6ea2aad4893feb6303a2f872, type: 3}

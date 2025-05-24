@@ -13,97 +13,102 @@ public static class GameComponentsLookup {
     public const int View = 2;
     public const int ViewPath = 3;
     public const int ViewPrefab = 4;
-    public const int Damage = 5;
-    public const int EntityLink = 6;
-    public const int Id = 7;
-    public const int SpriteRenderer = 8;
-    public const int StatusVisuals = 9;
-    public const int Transform = 10;
-    public const int WorldPosition = 11;
-    public const int AbilityId = 12;
-    public const int LaserShooter = 13;
-    public const int LaserShotAbility = 14;
-    public const int LaserShotTarget = 15;
-    public const int Armament = 16;
-    public const int EffectSetups = 17;
-    public const int Processed = 18;
-    public const int StatusSetups = 19;
-    public const int TargetLimit = 20;
-    public const int BaseStats = 21;
-    public const int StatChange = 22;
-    public const int StatModifiers = 23;
-    public const int Cooldown = 24;
-    public const int CooldownLeft = 25;
-    public const int CooldownUp = 26;
-    public const int DamageEffect = 27;
-    public const int Effect = 28;
-    public const int EffectValue = 29;
-    public const int HealEffect = 30;
-    public const int ProducerId = 31;
-    public const int TargetId = 32;
-    public const int EnchantHolder = 33;
-    public const int EnchantTypeId = 34;
-    public const int EnchantVisuals = 35;
-    public const int ExplosiveEnchant = 36;
-    public const int PoisonEnchant = 37;
-    public const int Enemy = 38;
-    public const int EnemyAnimator = 39;
-    public const int EnemyMoveTarget = 40;
-    public const int EnemyTypeId = 41;
-    public const int SpawnTimer = 42;
-    public const int Hero = 43;
-    public const int HeroAnimator = 44;
-    public const int ExperienceMeter = 45;
-    public const int CurrentHP = 46;
-    public const int Dead = 47;
-    public const int FullHP = 48;
-    public const int ProcessingDeath = 49;
-    public const int CollectDistance = 50;
-    public const int Collected = 51;
-    public const int Experience = 52;
-    public const int ExpLootPoolingRadius = 53;
-    public const int ExpPullable = 54;
-    public const int Loot = 55;
-    public const int LootPoolingRadius = 56;
-    public const int LootTypeId = 57;
-    public const int Pullable = 58;
-    public const int Pulling = 59;
-    public const int PullSpeed = 60;
-    public const int Direction = 61;
-    public const int MovementAvailable = 62;
-    public const int MoveTarget = 63;
-    public const int Moving = 64;
-    public const int MovingToHero = 65;
-    public const int MovingToTarget = 66;
-    public const int Speed = 67;
-    public const int TurnedAlongDirection = 68;
-    public const int Affected = 69;
-    public const int Applied = 70;
-    public const int ApplierStatusLink = 71;
-    public const int Duration = 72;
-    public const int Freeze = 73;
-    public const int Period = 74;
-    public const int Poison = 75;
-    public const int Status = 76;
-    public const int StatusTypeId = 77;
-    public const int TimeLeft = 78;
-    public const int TimeSinceLastTick = 79;
-    public const int Unapplied = 80;
-    public const int CollectingTargetsContinuously = 81;
-    public const int CollectTargetsInterval = 82;
-    public const int CollectTargetsTimer = 83;
-    public const int EnemyLayerMask = 84;
-    public const int LayerMask = 85;
-    public const int ProcessedTargetsBuffer = 86;
-    public const int Reached = 87;
-    public const int ReadyToCollectTargets = 88;
-    public const int TargetsBuffer = 89;
-    public const int TargetsSelectionRadius = 90;
-    public const int AxisInput = 91;
-    public const int CursorPositionInput = 92;
-    public const int Input = 93;
+    public const int Active = 5;
+    public const int Damage = 6;
+    public const int EntityLink = 7;
+    public const int Id = 8;
+    public const int SpriteRenderer = 9;
+    public const int StatusVisuals = 10;
+    public const int Transform = 11;
+    public const int WorldPosition = 12;
+    public const int AbilityId = 13;
+    public const int LaserShooter = 14;
+    public const int LaserShotAbility = 15;
+    public const int LaserShotTarget = 16;
+    public const int ParentAbility = 17;
+    public const int RecreatedOnUpgrade = 18;
+    public const int UpgradeRequest = 19;
+    public const int Armament = 20;
+    public const int EffectSetups = 21;
+    public const int Processed = 22;
+    public const int StatusSetups = 23;
+    public const int TargetLimit = 24;
+    public const int BaseStats = 25;
+    public const int StatChange = 26;
+    public const int StatModifiers = 27;
+    public const int Cooldown = 28;
+    public const int CooldownLeft = 29;
+    public const int CooldownUp = 30;
+    public const int DamageEffect = 31;
+    public const int Effect = 32;
+    public const int EffectValue = 33;
+    public const int HealEffect = 34;
+    public const int ProducerId = 35;
+    public const int TargetId = 36;
+    public const int EnchantHolder = 37;
+    public const int EnchantTypeId = 38;
+    public const int EnchantVisuals = 39;
+    public const int ExplosiveEnchant = 40;
+    public const int PoisonEnchant = 41;
+    public const int Enemy = 42;
+    public const int EnemyAnimator = 43;
+    public const int EnemyMoveTarget = 44;
+    public const int EnemyTypeId = 45;
+    public const int SpawnTimer = 46;
+    public const int Hero = 47;
+    public const int HeroAnimator = 48;
+    public const int ExperienceMeter = 49;
+    public const int LevelUp = 50;
+    public const int CurrentHP = 51;
+    public const int Dead = 52;
+    public const int FullHP = 53;
+    public const int ProcessingDeath = 54;
+    public const int CollectDistance = 55;
+    public const int Collected = 56;
+    public const int Experience = 57;
+    public const int ExpLootPoolingRadius = 58;
+    public const int ExpPullable = 59;
+    public const int Loot = 60;
+    public const int LootPoolingRadius = 61;
+    public const int LootTypeId = 62;
+    public const int Pullable = 63;
+    public const int Pulling = 64;
+    public const int PullSpeed = 65;
+    public const int Direction = 66;
+    public const int MovementAvailable = 67;
+    public const int MoveTarget = 68;
+    public const int Moving = 69;
+    public const int MovingToHero = 70;
+    public const int MovingToTarget = 71;
+    public const int Speed = 72;
+    public const int TurnedAlongDirection = 73;
+    public const int Affected = 74;
+    public const int Applied = 75;
+    public const int ApplierStatusLink = 76;
+    public const int Duration = 77;
+    public const int Freeze = 78;
+    public const int Period = 79;
+    public const int Poison = 80;
+    public const int Status = 81;
+    public const int StatusTypeId = 82;
+    public const int TimeLeft = 83;
+    public const int TimeSinceLastTick = 84;
+    public const int Unapplied = 85;
+    public const int CollectingTargetsContinuously = 86;
+    public const int CollectTargetsInterval = 87;
+    public const int CollectTargetsTimer = 88;
+    public const int EnemyLayerMask = 89;
+    public const int LayerMask = 90;
+    public const int ProcessedTargetsBuffer = 91;
+    public const int Reached = 92;
+    public const int ReadyToCollectTargets = 93;
+    public const int TargetsBuffer = 94;
+    public const int TargetsSelectionRadius = 95;
+    public const int AxisInput = 96;
+    public const int CursorPositionInput = 97;
+    public const int Input = 98;
 
-    public const int TotalComponents = 94;
+    public const int TotalComponents = 99;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -111,6 +116,7 @@ public static class GameComponentsLookup {
         "View",
         "ViewPath",
         "ViewPrefab",
+        "Active",
         "Damage",
         "EntityLink",
         "Id",
@@ -122,6 +128,9 @@ public static class GameComponentsLookup {
         "LaserShooter",
         "LaserShotAbility",
         "LaserShotTarget",
+        "ParentAbility",
+        "RecreatedOnUpgrade",
+        "UpgradeRequest",
         "Armament",
         "EffectSetups",
         "Processed",
@@ -152,6 +161,7 @@ public static class GameComponentsLookup {
         "Hero",
         "HeroAnimator",
         "ExperienceMeter",
+        "LevelUp",
         "CurrentHP",
         "Dead",
         "FullHP",
@@ -208,6 +218,7 @@ public static class GameComponentsLookup {
         typeof(Code.Common.View),
         typeof(Code.Common.ViewPath),
         typeof(Code.Common.ViewPrefab),
+        typeof(Code.Gameplay.Common.Active),
         typeof(Code.Gameplay.Common.Damage),
         typeof(Code.Gameplay.Common.EntityLink),
         typeof(Code.Gameplay.Common.Id),
@@ -219,6 +230,9 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Abilities.LaserShooter),
         typeof(Code.Gameplay.Features.Abilities.LaserShotAbility),
         typeof(Code.Gameplay.Features.Abilities.LaserShotTarget),
+        typeof(Code.Gameplay.Features.Abilities.ParentAbility),
+        typeof(Code.Gameplay.Features.Abilities.RecreatedOnUpgrade),
+        typeof(Code.Gameplay.Features.Abilities.UpgradeRequest),
         typeof(Code.Gameplay.Features.Armaments.Armament),
         typeof(Code.Gameplay.Features.Armaments.EffectSetups),
         typeof(Code.Gameplay.Features.Armaments.Processed),
@@ -249,6 +263,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
         typeof(Code.Gameplay.Features.LevelUp.ExperienceMeterComponent),
+        typeof(Code.Gameplay.Features.LevelUp.LevelUp),
         typeof(Code.Gameplay.Features.LifeTime.CurrentHP),
         typeof(Code.Gameplay.Features.LifeTime.Dead),
         typeof(Code.Gameplay.Features.LifeTime.FullHP),

@@ -7,6 +7,7 @@ using Code.Gameplay.Features.Effects;
 using Code.Gameplay.Features.Enchants;
 using Code.Gameplay.Features.Enemies;
 using Code.Gameplay.Features.Hero;
+using Code.Gameplay.Features.LevelUp;
 using Code.Gameplay.Features.LifeTime;
 using Code.Gameplay.Features.Loot;
 using Code.Gameplay.Features.Movement;
@@ -38,6 +39,7 @@ namespace Code.Gameplay
       Add(_systemFactory.Create<DeathFeature>());
       
       Add(_systemFactory.Create<LootFeature>());
+      Add(_systemFactory.Create<LevelUpFeature>());
       
       Add(_systemFactory.Create<MovementFeature>());
       Add(_systemFactory.Create<AbilityFeature>());
