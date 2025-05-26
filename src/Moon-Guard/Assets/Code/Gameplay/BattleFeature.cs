@@ -11,6 +11,7 @@ using Code.Gameplay.Features.LevelUp;
 using Code.Gameplay.Features.LifeTime;
 using Code.Gameplay.Features.Loot;
 using Code.Gameplay.Features.Movement;
+using Code.Gameplay.Features.Score;
 using Code.Gameplay.Features.Statuses;
 using Code.Gameplay.Features.Statuses.Factory;
 using Code.Gameplay.Features.Statuses.Systems;
@@ -39,6 +40,7 @@ namespace Code.Gameplay
       Add(_systemFactory.Create<DeathFeature>());
       
       Add(_systemFactory.Create<LootFeature>());
+      Add(_systemFactory.Create<ScoreFeature>());
       Add(_systemFactory.Create<LevelUpFeature>());
       
       Add(_systemFactory.Create<MovementFeature>());

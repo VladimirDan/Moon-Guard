@@ -1,5 +1,6 @@
 ﻿using Code.Gameplay.Features.LevelUp.Systems;
 using Code.Gameplay.Features.Loot.Systems;
+using Code.Gameplay.Features.Score.Systems;
 using Code.Gameplay.Features.TargetCollection.Systems;
 using Code.Infrastructure.Systems;
 
@@ -19,6 +20,7 @@ namespace Code.Gameplay.Features.Loot
             Add(systemFactory.Create<CollectStatusItemSystem>());
             
             Add(systemFactory.Create<UpdateExperienceMeterSystem>());
+            Add(systemFactory.Create<UpdateCurrentScore>());
             
             Add(systemFactory.Create<CleanupCollectedSystem>());
         }

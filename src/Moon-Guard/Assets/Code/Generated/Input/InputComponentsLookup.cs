@@ -8,15 +8,21 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
+    public const int AxisInput = 0;
+    public const int CursorPositionInput = 1;
+    public const int Input = 2;
 
-
-    public const int TotalComponents = 0;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
-
+        "AxisInput",
+        "CursorPositionInput",
+        "Input"
     };
 
     public static readonly System.Type[] componentTypes = {
-
+        typeof(Code.Gameplay.Input.AxisInput),
+        typeof(Code.Gameplay.Input.CursorPositionInput),
+        typeof(Code.Gameplay.Input.Input)
     };
 }

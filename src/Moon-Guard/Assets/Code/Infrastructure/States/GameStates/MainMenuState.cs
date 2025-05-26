@@ -32,14 +32,14 @@ namespace Code.Infrastructure.States.GameStates
 
     public void Exit()
     {
-      _mainMenuFeature.DeactivateReactiveSystems();
-      _mainMenuFeature.ClearReactiveSystems();
-
-      DestructEntities();
-      
-      _mainMenuFeature.Cleanup();
-      _mainMenuFeature.TearDown();
-      _mainMenuFeature = null;
+      // _mainMenuFeature.DeactivateReactiveSystems();
+      // _mainMenuFeature.ClearReactiveSystems();
+      //
+      // DestructEntities();
+      //
+      // _mainMenuFeature.Cleanup();
+      // _mainMenuFeature.TearDown();
+      // _mainMenuFeature = null;
     }
     
     private void DestructEntities()

@@ -82,31 +82,31 @@ public static class GameComponentsLookup {
     public const int MovingToTarget = 71;
     public const int Speed = 72;
     public const int TurnedAlongDirection = 73;
-    public const int Affected = 74;
-    public const int Applied = 75;
-    public const int ApplierStatusLink = 76;
-    public const int Duration = 77;
-    public const int Freeze = 78;
-    public const int Period = 79;
-    public const int Poison = 80;
-    public const int Status = 81;
-    public const int StatusTypeId = 82;
-    public const int TimeLeft = 83;
-    public const int TimeSinceLastTick = 84;
-    public const int Unapplied = 85;
-    public const int CollectingTargetsContinuously = 86;
-    public const int CollectTargetsInterval = 87;
-    public const int CollectTargetsTimer = 88;
-    public const int EnemyLayerMask = 89;
-    public const int LayerMask = 90;
-    public const int ProcessedTargetsBuffer = 91;
-    public const int Reached = 92;
-    public const int ReadyToCollectTargets = 93;
-    public const int TargetsBuffer = 94;
-    public const int TargetsSelectionRadius = 95;
-    public const int AxisInput = 96;
-    public const int CursorPositionInput = 97;
-    public const int Input = 98;
+    public const int CurrentScore = 74;
+    public const int HighScore = 75;
+    public const int Score = 76;
+    public const int Affected = 77;
+    public const int Applied = 78;
+    public const int ApplierStatusLink = 79;
+    public const int Duration = 80;
+    public const int Freeze = 81;
+    public const int Period = 82;
+    public const int Poison = 83;
+    public const int Status = 84;
+    public const int StatusTypeId = 85;
+    public const int TimeLeft = 86;
+    public const int TimeSinceLastTick = 87;
+    public const int Unapplied = 88;
+    public const int CollectingTargetsContinuously = 89;
+    public const int CollectTargetsInterval = 90;
+    public const int CollectTargetsTimer = 91;
+    public const int EnemyLayerMask = 92;
+    public const int LayerMask = 93;
+    public const int ProcessedTargetsBuffer = 94;
+    public const int Reached = 95;
+    public const int ReadyToCollectTargets = 96;
+    public const int TargetsBuffer = 97;
+    public const int TargetsSelectionRadius = 98;
 
     public const int TotalComponents = 99;
 
@@ -185,6 +185,9 @@ public static class GameComponentsLookup {
         "MovingToTarget",
         "Speed",
         "TurnedAlongDirection",
+        "CurrentScore",
+        "HighScore",
+        "Score",
         "Affected",
         "Applied",
         "ApplierStatusLink",
@@ -206,10 +209,7 @@ public static class GameComponentsLookup {
         "Reached",
         "ReadyToCollectTargets",
         "TargetsBuffer",
-        "TargetsSelectionRadius",
-        "AxisInput",
-        "CursorPositionInput",
-        "Input"
+        "TargetsSelectionRadius"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -287,6 +287,9 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Movement.MovingToTarget),
         typeof(Code.Gameplay.Features.Movement.Speed),
         typeof(Code.Gameplay.Features.Movement.TurnedAlongDirection),
+        typeof(Code.Gameplay.Features.Score.CurrentScore),
+        typeof(Code.Gameplay.Features.Score.HighScore),
+        typeof(Code.Gameplay.Features.Score.Score),
         typeof(Code.Gameplay.Features.Statuses.Affected),
         typeof(Code.Gameplay.Features.Statuses.Applied),
         typeof(Code.Gameplay.Features.Statuses.ApplierStatusLink),
@@ -308,9 +311,6 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.TargetCollection.Reached),
         typeof(Code.Gameplay.Features.TargetCollection.ReadyToCollectTargets),
         typeof(Code.Gameplay.Features.TargetCollection.TargetsBuffer),
-        typeof(Code.Gameplay.Features.TargetCollection.TargetsSelectionRadius),
-        typeof(Code.Gameplay.Input.AxisInput),
-        typeof(Code.Gameplay.Input.CursorPositionInput),
-        typeof(Code.Gameplay.Input.Input)
+        typeof(Code.Gameplay.Features.TargetCollection.TargetsSelectionRadius)
     };
 }

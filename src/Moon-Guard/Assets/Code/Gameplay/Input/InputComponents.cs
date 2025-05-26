@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.Gameplay.Input
 {
-  [Game] public class Input : IComponent { }
-  [Game] public class AxisInput : IComponent { public Vector2 Value; }
-  [Game] public class CursorPositionInput : IComponent { public Vector2 Value; }
+  [Input] public class Input : IComponent { }
+  [Input] public class AxisInput : IComponent { public Vector2 Value; }
+  [Input] public class CursorPositionInput : IComponent { public Vector2 Value; }
 }
