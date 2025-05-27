@@ -4,11 +4,12 @@ using Code.Infrastructure.Systems;
 
 namespace Code.Meta
 {
-  public class MainMenuFeature : Feature
-  {
-    public MainMenuFeature(ISystemFactory systems)
+    public class MainMenuFeature : Feature
     {
-      Add(systems.Create<ProcessDestructedFeature>());
+        public MainMenuFeature(ISystemFactory systems)
+        {
+            Add(systems.Create<MainMenuUIFeature>());
+            Add(systems.Create<ProcessDestructedFeature>());
+        }
     }
-  }
 }

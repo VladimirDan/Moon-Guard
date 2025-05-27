@@ -4,7 +4,7 @@ using Code.Infrastructure.States.StateMachine;
 
 namespace Code.Infrastructure.States.GameStates
 {
-  public class LoadingMainMenuState : IState
+  public class LoadingMainMenuState : SimpleState
   {
     private const string MainManuSceneName = "MainMenu";
     private readonly IGameStateMachine _stateMachine;
@@ -16,7 +16,7 @@ namespace Code.Infrastructure.States.GameStates
       _sceneLoader = sceneLoader;
     }
     
-    public void Enter()
+    public override void Enter()
     {
       _sceneLoader.LoadScene(MainManuSceneName, EnterHomeScreenState);
     }

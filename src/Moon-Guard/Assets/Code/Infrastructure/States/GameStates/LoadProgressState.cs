@@ -11,7 +11,7 @@ using Code.Progress.SaveLoad;
 
 namespace Code.Infrastructure.States.GameStates
 {
-    public class LoadProgressState : IState
+    public class LoadProgressState : SimpleState
     {
         private readonly IGameStateMachine _stateMachine;
         private readonly ISaveLoadService _saveLoadService;
@@ -24,7 +24,7 @@ namespace Code.Infrastructure.States.GameStates
             _saveLoadService = saveLoadService;
         }
 
-        public void Enter()
+        public override void Enter()
         {
             InitializeProgress();
 
@@ -47,10 +47,6 @@ namespace Code.Infrastructure.States.GameStates
                 .AddHighScore(0)
                 .AddCurrentScore(0)
                 .With(x => x.isScore = true);
-        }
-
-        public void Exit()
-        {
         }
     }
 }
