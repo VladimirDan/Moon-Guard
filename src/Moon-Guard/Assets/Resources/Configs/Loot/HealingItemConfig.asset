@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootTypeId: 2
   experience: 0
-  pullSpeed: 2
+  pullSpeed: 1
   collectDistance: 0.4
   viewPrefab: {fileID: 9143426660607647842, guid: 30fe502620df8d644a0bd50297c666be, type: 3}
   effectSetups:

@@ -7,6 +7,7 @@ namespace Code.Gameplay.Features.LifeTime
     {
         public DeathFeature(ISystemFactory systemFactory)
         {
+            Add(systemFactory.Create<SetDeadStatusToReachedMeteorSystem>());
             Add(systemFactory.Create<SetDeadStatusSystem>());
             Add(systemFactory.Create<UnapplyStatusOfDeadTargetSystem>());
         }

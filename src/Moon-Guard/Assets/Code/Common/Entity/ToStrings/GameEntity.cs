@@ -36,6 +36,9 @@ public sealed partial class GameEntity : INamedEntity
                 {
                     case nameof(Hero):
                         return PrintHero();
+                    
+                    case nameof(Moon):
+                        return PrintMoon();
 
                     case nameof(Enemy):
                         return PrintEnemy();
@@ -53,6 +56,13 @@ public sealed partial class GameEntity : INamedEntity
     private string PrintHero()
     {
         return new StringBuilder($"Hero ")
+            .With(s => s.Append($"Id:{Id}"), when: hasId)
+            .ToString();
+    }
+
+    private string PrintMoon()
+    {
+        return new StringBuilder($"Moon ")
             .With(s => s.Append($"Id:{Id}"), when: hasId)
             .ToString();
     }

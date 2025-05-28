@@ -7,23 +7,23 @@ namespace Code.Gameplay.Features.EffectApplication.Systems
     public class ApplyEffectsOnTargetsSystem : IExecuteSystem
     {
         private readonly IEffectFactory _effectFactory;
-        private readonly IGroup<GameEntity> _entities;
+        private readonly IGroup<GameEntity> _effects;
 
         public ApplyEffectsOnTargetsSystem(GameContext gameContext, IEffectFactory effectFactory)
         {
             _effectFactory = effectFactory;
-            _entities = gameContext.GetGroup(GameMatcher
+            _effects = gameContext.GetGroup(GameMatcher
                 .AllOf(GameMatcher.EffectSetups,
                     GameMatcher.TargetsBuffer));
         }
 
         public void Execute()
         {
-            foreach (GameEntity entity in _entities)
-            foreach (int targetId in entity.TargetsBuffer)
-            foreach (EffectSetup effectSetup in entity.EffectSetups)
+            foreach (GameEntity effect in _effects)
+            foreach (int targetId in effect.TargetsBuffer)
+            foreach (EffectSetup effectSetup in effect.EffectSetups)
             {
-                _effectFactory.CreateEffect(effectSetup, ProducerId(entity), targetId);
+                _effectFactory.CreateEffect(effectSetup, ProducerId(effect), targetId);
             }
         }
 

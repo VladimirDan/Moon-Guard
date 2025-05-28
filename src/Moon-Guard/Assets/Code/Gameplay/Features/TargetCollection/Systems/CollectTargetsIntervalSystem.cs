@@ -14,7 +14,7 @@ namespace Code.Gameplay.Features.TargetCollection.Systems
             
             _entities = gameContext.GetGroup(GameMatcher
                 .AllOf(
-                    GameMatcher.ReadyToCollectTargets,
+                    GameMatcher.TargetsBuffer,
                     GameMatcher.CollectTargetsInterval,
                     GameMatcher.CollectTargetsTimer
                 ));

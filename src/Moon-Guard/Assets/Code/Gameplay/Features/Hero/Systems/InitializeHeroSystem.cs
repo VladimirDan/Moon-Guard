@@ -28,6 +28,7 @@ namespace Code.Gameplay.Features.Hero.Systems
         public void Initialize()
         {
             GameEntity hero = _heroFactory.CreateHero(_levelDataProvider.StartPoint);
+            GameEntity moon = _heroFactory.CreateMoon(_levelDataProvider.StartPoint);
             _abilityUpgradeService.InitializeAbility(AbilityId.LaserShot);
         }
     }

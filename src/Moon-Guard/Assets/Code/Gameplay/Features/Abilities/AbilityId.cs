@@ -4,6 +4,5 @@
     {
         Unknown = 0,
         LaserShot = 1,
-        
     }
 }

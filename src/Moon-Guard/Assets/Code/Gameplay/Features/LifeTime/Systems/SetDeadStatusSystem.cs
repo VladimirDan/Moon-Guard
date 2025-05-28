@@ -6,7 +6,7 @@ namespace Code.Gameplay.Features.LifeTime.Systems
     public class SetDeadStatusSystem : IExecuteSystem
     {
         private readonly IGroup<GameEntity> _entities;
-        private List<GameEntity> _buffer = new (256);
+        private List<GameEntity> _buffer = new(256);
 
         public SetDeadStatusSystem(GameContext game)
         {
@@ -14,7 +14,6 @@ namespace Code.Gameplay.Features.LifeTime.Systems
                 .AllOf(
                     GameMatcher.CurrentHP
                 ).NoneOf(GameMatcher.Dead));
-            
         }
 
         public void Execute()

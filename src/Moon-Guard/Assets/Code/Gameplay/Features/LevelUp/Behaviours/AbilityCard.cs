@@ -16,7 +16,6 @@ namespace Code.Gameplay.Features.LevelUp.Behaviours
         public Image icon;
         public TextMeshProUGUI description;
         public Button button;
-        public GameObject stamp;
         public Action<AbilityId> _onSelected;
 
         public void Setup(AbilityId id, AbilityLevel abilityLevel, Action<AbilityId> onSelected)
@@ -37,14 +36,11 @@ namespace Code.Gameplay.Features.LevelUp.Behaviours
 
         private void SelectCard()
         {
-            StartCoroutine(StampAndReport());
+            ApplyAbilityUpdate();
         }
 
-        private IEnumerator StampAndReport()
+        private void ApplyAbilityUpdate()
         {
-            stamp.SetActive(true);
-            yield return new WaitForSeconds(StampAnimationTime);
-            
             _onSelected?.Invoke(abilityId);
         }
     }

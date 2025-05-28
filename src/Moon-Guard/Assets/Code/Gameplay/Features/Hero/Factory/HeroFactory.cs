@@ -43,5 +43,24 @@ namespace Code.Gameplay.Features.Hero.Factory
                 .With(x => x.isMovementAvailable = true)
                 ;
         }
+        
+        public GameEntity CreateMoon(Vector3 pos)
+        {
+            Dictionary<Stats, float> baseStats = InitStats.EmptyStatDictionary()
+                .With(x => x[Stats.MaxHp] = 300);
+            
+            return CreateEntity.Empty()
+                    .AddId(_identifierService.Next())
+                    .AddViewPath("Gameplay/Hero/Moon")
+                    .AddWorldPosition(pos)
+                    .AddBaseStats(baseStats)
+                    .AddStatModifiers(InitStats.EmptyStatDictionary())
+                    .AddDirection(Vector2.zero)
+                    .AddCurrentHP(baseStats[Stats.MaxHp])
+                    .AddFullHP(baseStats[Stats.MaxHp])
+                    .AddEnemyLayerMask(CollisionLayer.Enemy.AsMask())
+                    .With(x => x.isMoon = true)
+                ;
+        }
     }
 }

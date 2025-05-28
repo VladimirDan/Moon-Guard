@@ -43,7 +43,8 @@ namespace Code.Gameplay.Features.Enemies.Systems
                 if (timer.SpawnTimer <= 0)
                 {
                     timer.ReplaceSpawnTimer(GamePlayConstants.EnemySpawnTimer);
-                    _enemyFactory.CreateEnemy(EnemyTypeId.Predator, pos: RandomSpawnPosition(hero.WorldPosition));
+                    _enemyFactory.CreateEnemy(EnemyTypeId.Predator, pos: RandomSpawnPosition(hero.WorldPosition), Vector3.zero);
+                    _enemyFactory.CreateEnemy(EnemyTypeId.Meteor, pos: RandomSpawnPosition(hero.WorldPosition), RandomSpawnPosition(hero.WorldPosition));
                 }
             }
             

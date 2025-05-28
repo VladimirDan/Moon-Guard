@@ -33,7 +33,8 @@ namespace Code.Gameplay.Features.Abilities.Systems
             
             _laserShooters = gameContext.GetGroup(GameMatcher.AllOf(
                 GameMatcher.LaserShooter,
-                GameMatcher.WorldPosition
+                GameMatcher.WorldPosition,
+                GameMatcher.Direction
                 ));
             
             _enemies  = gameContext.GetGroup(GameMatcher.AllOf(
@@ -52,7 +53,7 @@ namespace Code.Gameplay.Features.Abilities.Systems
                 _armamentFactory
                     .CreateLaserShot(abilityLevel, laserShooter.WorldPosition, laserShooter.EnemyLayerMask)
                     .AddProducerId(laserShooter.Id)
-                    .ReplaceDirection((FirstAvailableTarget().WorldPosition - laserShooter.WorldPosition).normalized)
+                    .ReplaceDirection(laserShooter.Direction)
                     .With(x => x.isMoving = true);
                 
                 ability

@@ -5,6 +5,7 @@ namespace Code.Gameplay.Common.Time
   public class UnityTimeService : ITimeService
   {
     private bool _paused;
+    public bool isPaused => _paused;
 
     public float DeltaTime => !_paused ? UnityEngine.Time.deltaTime : 0;
 

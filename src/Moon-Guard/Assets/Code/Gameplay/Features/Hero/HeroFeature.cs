@@ -13,6 +13,8 @@ namespace Code.Gameplay.Features.Hero
       Add(systemFactory.Create<SetHeroMoveTargetSystem>());
       
       Add(systemFactory.Create<CameraFollowHeroSystem>());
+      Add(systemFactory.Create<UpdateHPMeterSystem>());
+      
       
       Add(systemFactory.Create<HeroDeathSystem>());
       Add(systemFactory.Create<FinalizeHeroDeathProcessingSystem>());

@@ -4,5 +4,6 @@
   {
     Unknown = 0,
     Predator = 1,
+    Meteor = 2,
   }
 }

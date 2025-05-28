@@ -9,6 +9,7 @@ namespace Code.Gameplay.Features.GameOver
         public GameOverFeature(ISystemFactory systemFactory)
         {
             Add(systemFactory.Create<GameOverOnHeroDeath>());
+            Add(systemFactory.Create<GameOverOnMoonDeath>());
         }
     }
 }

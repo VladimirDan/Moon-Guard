@@ -18,12 +18,14 @@ namespace Code.Gameplay.Features.Enemies.Factory
             _identifierService = identifierService;
         }
         
-        public GameEntity CreateEnemy(EnemyTypeId enemyTypeId, Vector3 pos)
+        public GameEntity CreateEnemy(EnemyTypeId enemyTypeId, Vector3 pos, Vector3 targetPos)
         {
             switch (enemyTypeId)
             {
                 case EnemyTypeId.Predator:
                     return CreatePredator(pos);
+                case EnemyTypeId.Meteor:
+                    return CreateMeteor(pos, targetPos);
             }
             
             throw new ArgumentOutOfRangeException(nameof(enemyTypeId), enemyTypeId, null);
@@ -46,7 +48,7 @@ namespace Code.Gameplay.Features.Enemies.Factory
                 .AddSpeed(baseStats[Stats.Speed])
                 .AddCurrentHP(baseStats[Stats.MaxHp])
                 .AddFullHP(baseStats[Stats.MaxHp])
-                .AddEffectSetups(new List<EffectSetup>(){new(){effectTypeId = EffectTypeId.Damage, value = baseStats[Stats.Damage]}})
+                .AddEffectSetups(new List<EffectSetup>(){new EffectSetup(){effectTypeId = EffectTypeId.Damage, value = baseStats[Stats.Damage]}})
                 .AddTargetsBuffer(new List<int>(1))
                 .AddTargetsSelectionRadius(0.3f)
                 .AddCollectTargetsInterval(0.5f)
@@ -56,6 +58,36 @@ namespace Code.Gameplay.Features.Enemies.Factory
                 .With(x => x.isTurnedAlongDirection = true)
                 .With(x => x.isMovingToTarget = true)
                 .With(x => x.isMovingToHero = true)
+                .With(x => x.isMovementAvailable = true);
+        }
+
+        private GameEntity CreateMeteor(Vector3 pos, Vector3 targetPos)
+        {
+            Dictionary<Stats, float> baseStats = InitStats.EmptyStatDictionary()
+                .With(x => x[Stats.Speed] = 1)
+                .With(x => x[Stats.MaxHp] = 500)
+                .With(x => x[Stats.Damage] = 0.5f);
+            
+            return CreateEntity.Empty()
+                .AddId(_identifierService.Next())
+                .AddViewPath("Gameplay/Enemies/Meteors/Meteor")
+                .AddEnemyTypeId(EnemyTypeId.Meteor)
+                .AddWorldPosition(pos)
+                .AddMoveTarget(targetPos)
+                .AddBaseStats(baseStats)
+                .AddStatModifiers(InitStats.EmptyStatDictionary())
+                .AddSpeed(baseStats[Stats.Speed])
+                .AddCurrentHP(baseStats[Stats.MaxHp])
+                .AddFullHP(baseStats[Stats.MaxHp])
+                .AddEffectSetups(new List<EffectSetup>(){new EffectSetup(){effectTypeId = EffectTypeId.Damage, value = baseStats[Stats.Damage]}})
+                .AddTargetsBuffer(new List<int>(1))
+                .AddTargetsSelectionRadius(1f)
+                .AddCollectTargetsInterval(0.01f)
+                .AddCollectTargetsTimer(0f)
+                .AddLayerMask(CollisionLayer.Hero.AsMask())
+                .With(x => x.isEnemy = true)
+                .With(x => x.isMeteor = true)
+                .With(x => x.isMovingToTarget = true)
                 .With(x => x.isMovementAvailable = true);
         }
     }

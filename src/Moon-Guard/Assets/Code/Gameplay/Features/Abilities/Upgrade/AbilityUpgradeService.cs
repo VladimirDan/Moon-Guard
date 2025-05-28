@@ -37,12 +37,6 @@ namespace Code.Gameplay.Features.Abilities.Upgrade
         case AbilityId.LaserShot:
           _abilityFactory.CreateLaserShotAbility(level: 1);
           break;
-        // case AbilityId.GarlicAura:
-        //   _abilityFactory.CreateGarlicAuraAbility();
-        //   break;
-        // case AbilityId.OrbitingMushroom:
-        //   _abilityFactory.CreateOrbitingMushroomAbility(level: 1);
-        //   break;
         default:
           throw new Exception($"Ability {ability} is not defined");
       }

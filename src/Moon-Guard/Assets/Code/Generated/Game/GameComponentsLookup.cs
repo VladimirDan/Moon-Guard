@@ -54,61 +54,65 @@ public static class GameComponentsLookup {
     public const int EnemyAnimator = 43;
     public const int EnemyMoveTarget = 44;
     public const int EnemyTypeId = 45;
-    public const int SpawnTimer = 46;
-    public const int Hero = 47;
-    public const int HeroAnimator = 48;
-    public const int ExperienceMeter = 49;
-    public const int LevelUp = 50;
-    public const int CurrentHP = 51;
-    public const int Dead = 52;
-    public const int FullHP = 53;
-    public const int ProcessingDeath = 54;
-    public const int CollectDistance = 55;
-    public const int Collected = 56;
-    public const int Experience = 57;
-    public const int ExpLootPoolingRadius = 58;
-    public const int ExpPullable = 59;
-    public const int Loot = 60;
-    public const int LootPoolingRadius = 61;
-    public const int LootTypeId = 62;
-    public const int Pullable = 63;
-    public const int Pulling = 64;
-    public const int PullSpeed = 65;
-    public const int Direction = 66;
-    public const int MovementAvailable = 67;
-    public const int MoveTarget = 68;
-    public const int Moving = 69;
-    public const int MovingToHero = 70;
-    public const int MovingToTarget = 71;
-    public const int Speed = 72;
-    public const int TurnedAlongDirection = 73;
-    public const int CurrentScore = 74;
-    public const int HighScore = 75;
-    public const int Score = 76;
-    public const int Affected = 77;
-    public const int Applied = 78;
-    public const int ApplierStatusLink = 79;
-    public const int Duration = 80;
-    public const int Freeze = 81;
-    public const int Period = 82;
-    public const int Poison = 83;
-    public const int Status = 84;
-    public const int StatusTypeId = 85;
-    public const int TimeLeft = 86;
-    public const int TimeSinceLastTick = 87;
-    public const int Unapplied = 88;
-    public const int CollectingTargetsContinuously = 89;
-    public const int CollectTargetsInterval = 90;
-    public const int CollectTargetsTimer = 91;
-    public const int EnemyLayerMask = 92;
-    public const int LayerMask = 93;
-    public const int ProcessedTargetsBuffer = 94;
-    public const int Reached = 95;
-    public const int ReadyToCollectTargets = 96;
-    public const int TargetsBuffer = 97;
-    public const int TargetsSelectionRadius = 98;
+    public const int Meteor = 46;
+    public const int SpawnTimer = 47;
+    public const int Hero = 48;
+    public const int HeroAnimator = 49;
+    public const int HPMeter = 50;
+    public const int HPMeterTarget = 51;
+    public const int Moon = 52;
+    public const int ExperienceMeter = 53;
+    public const int LevelUp = 54;
+    public const int CurrentHP = 55;
+    public const int Dead = 56;
+    public const int FullHP = 57;
+    public const int ProcessingDeath = 58;
+    public const int CollectDistance = 59;
+    public const int Collected = 60;
+    public const int Experience = 61;
+    public const int ExpLootPoolingRadius = 62;
+    public const int ExpPullable = 63;
+    public const int Loot = 64;
+    public const int LootPoolingRadius = 65;
+    public const int LootTypeId = 66;
+    public const int Pullable = 67;
+    public const int Pulling = 68;
+    public const int PullSpeed = 69;
+    public const int Direction = 70;
+    public const int MovementAvailable = 71;
+    public const int MoveTarget = 72;
+    public const int Moving = 73;
+    public const int MovingToHero = 74;
+    public const int MovingToTarget = 75;
+    public const int Speed = 76;
+    public const int TurnedAlongDirection = 77;
+    public const int CurrentScore = 78;
+    public const int HighScore = 79;
+    public const int Score = 80;
+    public const int Affected = 81;
+    public const int Applied = 82;
+    public const int ApplierStatusLink = 83;
+    public const int Duration = 84;
+    public const int Freeze = 85;
+    public const int Period = 86;
+    public const int Poison = 87;
+    public const int Status = 88;
+    public const int StatusTypeId = 89;
+    public const int TimeLeft = 90;
+    public const int TimeSinceLastTick = 91;
+    public const int Unapplied = 92;
+    public const int CollectingTargetsContinuously = 93;
+    public const int CollectTargetsInterval = 94;
+    public const int CollectTargetsTimer = 95;
+    public const int EnemyLayerMask = 96;
+    public const int LayerMask = 97;
+    public const int ProcessedTargetsBuffer = 98;
+    public const int Reached = 99;
+    public const int ReadyToCollectTargets = 100;
+    public const int TargetsBuffer = 101;
+    public const int TargetsSelectionRadius = 102;
 
-    public const int TotalComponents = 99;
+    public const int TotalComponents = 103;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -157,9 +161,13 @@ public static class GameComponentsLookup {
         "EnemyAnimator",
         "EnemyMoveTarget",
         "EnemyTypeId",
+        "Meteor",
         "SpawnTimer",
         "Hero",
         "HeroAnimator",
+        "HPMeter",
+        "HPMeterTarget",
+        "Moon",
         "ExperienceMeter",
         "LevelUp",
         "CurrentHP",
@@ -259,9 +267,13 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Enemies.EnemyAnimatorComponent),
         typeof(Code.Gameplay.Features.Enemies.EnemyMoveTargetComponent),
         typeof(Code.Gameplay.Features.Enemies.EnemyTypeIdComponent),
+        typeof(Code.Gameplay.Features.Enemies.Meteor),
         typeof(Code.Gameplay.Features.Enemies.SpawnTimer),
         typeof(Code.Gameplay.Features.Hero.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
+        typeof(Code.Gameplay.Features.Hero.HPMeterComponent),
+        typeof(Code.Gameplay.Features.Hero.HPMeterTarget),
+        typeof(Code.Gameplay.Features.Hero.Moon),
         typeof(Code.Gameplay.Features.LevelUp.ExperienceMeterComponent),
         typeof(Code.Gameplay.Features.LevelUp.LevelUp),
         typeof(Code.Gameplay.Features.LifeTime.CurrentHP),
